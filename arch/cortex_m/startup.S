@@ -2,7 +2,7 @@
     .cpu        cortex-m3   
     .thumb          /*всё в режиме thumb*/
 
-    .section    isr_vector  /*секция вектора*/
+    .section    isr_vector, "a", %progbits  /*секция вектора*/
     .align      2   /* 2^2 = 4 выравнивание 4 байта*/
     .long       _stack  /* Начало MSP */
     .long       Reset_Handler   
